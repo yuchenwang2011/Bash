@@ -1,0 +1,22 @@
+#!/bin/bash
+# date has a lot options, you can try "man date" for help
+echo "this is the `date +%j`th day of the year"
+echo "`date -u -d '2007-09-01' +%m-%d-%Y`"
+
+prefix=temp
+suffix=$(date +%s)
+fileName=$prefix.$suffix
+echo "Temporary
+fileName = $fileName"
+
+#try to pass an argument to a function
+function myDate {
+  echo "The name of this script is : $0"
+  echo "I just gave it an argument : $1"
+}
+echo "$(myDate $(date +%d))"
+
+sleep 3     # Pauses 3 seconds.
+exit 0
+#  By convention, an 'exit 0' indicates success,
+#+ while a non-zero exit value means an error or anomalous condition.
