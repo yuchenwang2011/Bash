@@ -1,0 +1,10 @@
+#!/bin/bash
+echo `groups`
+echo $(who)       #show all logged users
+echo $(whoami)
+echo $(logname)
+echo $(who -q)
+
+a=$(echo $(who -q))
+b=$(echo ${a[0]} | sed 's/ .*//')  #practice to use array element and then delete everything after first space
+echo $(groups $b)
