@@ -8,3 +8,13 @@ echo $(who -q)
 a=$(echo $(who -q))
 b=$(echo ${a[0]} | sed 's/ .*//')  #practice to use array element and then delete everything after first space
 echo $(groups $b)
+
+#stty erase '#' which can be used to change the erase key to a #
+#stty -echo    # Turns off screen echo
+#stty echo     # Restores screen echo.
+
+echo `uname`     #Output system specifications (OS, kernel version, etc.) to stdout
+echo $(uname -m) #Show system architecture
+
+read i
+echo $i yeah
