@@ -1,0 +1,25 @@
+echo "The # here does not begin a comment."
+echo 'The # here does not begin a comment.'
+echo The \# here does not begin a comment.  #here the \# is called an escaped #
+
+#   ; is used to put 2 commands together in one single line
+
+
+# case options must use double semicolons 
+case $1 in
+ a) echo input is case a ;;
+ b) echo input is case b ''
+esac
+
+source system_admin_commands
+# source is equal to .
+. system_admin_commands
+
+#cp filepath .  means to copy the file to current directory
+
+# The comma operator [1] links together a series of arithmetic operations. 
+# All are evaluated, but only the last one is returned.
+let "b=(a=9,15/3)"
+echo $a
+echo $b
+
