@@ -23,3 +23,22 @@ let "b=(a=9,15/3)"
 echo $a
 echo $b
 
+#Array initialization
+Array=(1 2 3)
+echo ${Array[0]}
+echo ${Array[*]}
+Array[2]="nima"
+echo ${Array[*]}
+
+echo {0..5}
+echo {a..z}
+
+a=3;b=7
+echo $[$a*$b]
+
+#run the for loop in background
+for i in 1 2 3 4 5 
+do
+  echo -n $i haha
+done &
+
