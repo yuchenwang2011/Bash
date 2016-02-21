@@ -1,0 +1,18 @@
+This instruction is based on document: http://ashleynolan.co.uk/blog/launching-sublime-from-the-terminal
+
+To install a sublime on Mac OS:
+1. Go download the file
+http://www.sublimetext.com/2
+
+2. Double click the dmg file, then drag the sublime app to application folder.
+
+3. Try you can open it correctly
+open /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl
+
+4. Create a symlink, thus you can use it as a command just like using vim.
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+
+5. open ~/.bash_profile file, if you don't have one, create one yourself, can put following line inside
+export PATH=/usr/local/bin:$PATH
+
+6. Try open a file by using: sublime xxx.java
