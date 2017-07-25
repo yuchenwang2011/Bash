@@ -1,0 +1,43 @@
+1.	echo $shell  /bin/csh
+2.	cat /etc/*-release   (no comma!)   CentOS release 5.5 (Final)
+3.	dirs
+4.	pushd, give a directory, then popd. 
+5.	jobs, will show all the background (frontground) jobs. 
+6.	Ctrl+Z then bg, will suspend a job and then make it background. Check jobs, fg %number to make it frontground again. Or kill %number to kill a job (jobs will show the job id)
+7.	Alias is super useful, I know it but still not a master yet
+8.	Ctrl+l, to clear the screen (this is called key binding)
+9.	Ctrl+a, jump to BOL
+10.	Ctrl+e, jump to EOL
+11.	Ctrl+d, equal to exit
+12.	Shift+PageUp, page up
+13.	Shift+PageDown, page down
+14.	cd and cd -, cd will go to your home directory and cd – will go to the last dir you were.
+15.	ls: ls –l to give detail information. ls –a give all files. So combine and get ls –la
+16.	use WildCard, such as ?, *, such as ls tests.tc?
+17.	cat: cat > filename, return, then type the code , Ctrl+D to exit
+  cat –n filename, will give the number of lines in front. 
+  cat file1 file2 > file3, will combine file 1and 2 to generate file 3
+  cat –n file1> file2, will combine file 1 and 2 with number of lines to generate file3
+  cat –b file1 file 2 >> file3, will combine file1 and file 2 with number of lines (without empty lines).
+  cat /dev/null > file1.txt is to clean up txt file
+  cat >> file1.txt will append the input to file but will reserve what it has before.
+  cat  > file1, will give the input from keyboard to file1. 
+  cat < file1 > file2, means get input from file 1 and output it to file2, it’s same as cp file1 file2
+18.	grep: short for global regular expression print, where “” is not necessary
+you will also need to provide a filename filter, such as a file name or *, otherwise it just wait
+  grep “word” filename
+  grep “word” file1 file2 file3
+  grep -i "debugtime" tests.tcl, to ignore the word case.
+  grep -r "debugTime" ./ , to search recursively all lines all files and all directories under the current folder
+  grep –h “something” file1 file2, not print the file names “something” is found
+  grep –w “something” file1, just search the exact word something
+  grep –c “something” file1, returns the number of occurrences of the thing you search
+  grep –n “something” file1, returns also the line numbers where it appears.
+  grep –v “something” file1, returns the revert, which means you want to search the lines don’t have “something” in it 
+usually it’s combined together with other command using pipe ‘|’, for example
+  cat /proc/cpuinfo | grep -i 'Model' 
+  grep -l "debugTime" *.tcl , just give me the location or the file name. 
+  grep --color to give you the color 
+  grep –B 2 –A 2 readme.txt| grep –C 3 readme.txt to show adjacent lines
+19.	df -h to show the space of your linux
+20. tail -f dumps the file you are tracking
