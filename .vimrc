@@ -26,4 +26,9 @@ syn on
 set hls
 set fileformat=unix
 set paste
-:color koehler
+syn on
+syntax on
+:color blackboard
+#first you download a template color scheme file online, called blackboard.vim
+#second create a folder, mkdir ~/.vim/colors
+#third copy the blackboard.vim file under this folder
