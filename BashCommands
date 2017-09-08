@@ -42,3 +42,4 @@ usually it’s combined together with other command using pipe ‘|’, for exam
 19.	df -h to show the space of your linux
 20. tail -f dumps the file you are tracking
 21. cp /usr/share/zoneinfo/UTC /etc/localtime     to change timezone to UTC
+22. date 090818522017   (MMDDHHmmYYYY format to change the clock)
