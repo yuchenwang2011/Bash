@@ -41,3 +41,4 @@ usually it’s combined together with other command using pipe ‘|’, for exam
   grep –B 2 –A 2 readme.txt| grep –C 3 readme.txt to show adjacent lines
 19.	df -h to show the space of your linux
 20. tail -f dumps the file you are tracking
+21. cp /usr/share/zoneinfo/UTC /etc/localtime     to change timezone to UTC
