@@ -1,0 +1,32 @@
+Commands: (following this link https://www.youtube.com/watch?v=IHrGresKu2w)
+Powershell is case insensitive
+1. Start-Transcript
+
+2. Get-Command
+      Get-Command -noun s*  gets all the commands have a noun starts with s
+      get-command -Noun service  gets all the commands have a "service" in it
+
+3. Get-Help
+      get-help get-service -Examples  will get the help info about how to use this command get-service
+      get-help commandName -online  will take you to the webpage about how to use the command
+      
+4.cls  to clean the screen
+    get-alias cls   will show you what cls is short for
+
+5. Get-Member 
+    get all the properties and methods of objects.
+    
+6. Variables:
+    PS> $myVar = get-process MicrosoftEdge
+    PS> $myVar
+    PS> $myVar.Name
+    PS> $myVar.Kill()
+        above example shows how to save a process to an object
+        
+7. Get-History
+
+8. Get-PSDrive | where-object {$_.free -gt 1} 
+      get all the hard-drives, a lamda where (going through the object), the free space greater than 1. The "$_" means the current object
+      you can also write the command as 
+   Get-PSDrive | ?{$_.free -gt 1}
+   get-alias ?
