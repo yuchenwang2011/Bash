@@ -30,3 +30,12 @@ Powershell is case insensitive
       you can also write the command as 
    Get-PSDrive | ?{$_.free -gt 1}
    get-alias ?
+
+9. Select-Object
+   Get-PSDrive | ?{$_.free -gt 1} | select-object Root, used, free
+   Get-PSDrive | ?{$_.free -gt 1} | select-object *
+
+10. Write-Host
+      equals to console.writeline()
+      
+11. 
